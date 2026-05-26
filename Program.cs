@@ -1,7 +1,7 @@
 ﻿Console.WriteLine("Hello, World!");
-int a;
-int b;
-a=10;
-b=a;
-Console.WriteLine("valor de a:"+a);
-Console.WriteLine("valor de b:"+b);
+
+int num_invertido;
+string num_leido;
+
+Console.WriteLine("Ingrese un número");
+//Console.ReadLine(num_leido);
