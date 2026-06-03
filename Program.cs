@@ -185,3 +185,74 @@ else
 Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine("\n--- Fin del Programa ---");
 Console.ResetColor();
+//----------------//
+/* CALCULADORA V2 */
+//----------------//
+
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine("--- INICIO ---");
+Console.WriteLine("CALCULADORA V2\n");
+Console.ResetColor();
+
+Console.ForegroundColor = ConsoleColor.Yellow;
+Console.WriteLine("Ingrese un numero: ");
+Console.ResetColor();
+string? leerNumero = Console.ReadLine();
+double numero;
+bool esCasteable = double.TryParse(leerNumero, out numero);
+
+if (esCasteable)
+{
+    double valor_abs = Math.Abs(numero);
+    Console.WriteLine($"Valor Absoluto de {numero} = {valor_abs}");
+    double cuadrado = Math.Pow(numero,2);
+    Console.WriteLine($"{numero} al Cuadrado = {cuadrado}");
+    double raiz_cuad = Math.Sqrt(numero);
+    Console.WriteLine($"Raiz cuadrada de {numero} = {raiz_cuad}");
+    double seno = Math.Sin(numero);
+    Console.WriteLine($"Seno de {numero} = {seno}");
+    double coseno = Math.Cos(numero);
+    Console.WriteLine($"Coseno de {numero} = {coseno}");
+    /* La parte entera de un tipo float */
+    int parte_entera = (int)numero; // consultar si esto es realmente lo que me piden
+    Console.WriteLine($"Parte entera de {numero} = {parte_entera}");
+
+}
+else
+{
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.WriteLine("Error: el dato ingresado es inválido para operar.");
+    Console.ResetColor();
+}
+
+Console.ForegroundColor = ConsoleColor.Yellow;
+Console.WriteLine("\nIngresar dos numeros");
+Console.WriteLine("a = ");
+string? leerA = Console.ReadLine();
+Console.WriteLine("b = ");
+string? leerB = Console.ReadLine();
+Console.ResetColor();
+
+int a, b;
+bool esValidoA = int.TryParse(leerA, out a);
+bool esValidoB = int.TryParse(leerB, out b);
+
+if (esValidoA && esValidoB)
+{
+    int maximo = Math.Max(a,b);
+    int minimo = Math.Min(a,b);
+    Console.WriteLine($"El MAXIMO entre a={a} y b={b} es: {maximo}");
+    Console.WriteLine($"El MINIMO entre a={a} y b={b} es: {minimo}");
+}
+else
+{
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.WriteLine("Error: el dato ingresado es inválido para operar.");
+    Console.ResetColor();
+}
+
+
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine("\n--- Fin de CALCULADORA V2 ---\n");
+Console.WriteLine("\n--- Fin del Programa ---");
+Console.ResetColor();
