@@ -1,7 +1,12 @@
 ﻿int num_leido;
 string? s;
 
-Console.WriteLine("Ingrese un número");
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine("--- INICIO ---\n");
+Console.ResetColor();
+Console.ForegroundColor = ConsoleColor.Yellow;
+Console.WriteLine("Ingrese un número:");
+Console.ResetColor();
 s = Console.ReadLine();
 bool esUnNumero = int.TryParse(s, out num_leido);
 if (esUnNumero)
@@ -21,9 +26,8 @@ if (esUnNumero)
 /* CALCULADORA V1 */
 //----------------//
 
-Console.ForegroundColor = ConsoleColor.Green;
-Console.WriteLine("--- INICIO ---");
-Console.WriteLine("CALCULADORA V1\n");
+Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine("\n---CALCULADORA V1---\n");
 Console.ResetColor();
 
 Console.ForegroundColor = ConsoleColor.Yellow;
@@ -182,16 +186,18 @@ else
     Console.ResetColor();
 }
 
-Console.ForegroundColor = ConsoleColor.Green;
-Console.WriteLine("\n--- Fin del Programa ---");
+Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine("\n---FIN: CALCULADORA V1---\n");
 Console.ResetColor();
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
 //----------------//
 /* CALCULADORA V2 */
 //----------------//
 
-Console.ForegroundColor = ConsoleColor.Green;
-Console.WriteLine("--- INICIO ---");
-Console.WriteLine("CALCULADORA V2\n");
+Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine("\n---CALCULADORA V2---\n");
 Console.ResetColor();
 
 Console.ForegroundColor = ConsoleColor.Yellow;
@@ -251,8 +257,10 @@ else
     Console.ResetColor();
 }
 
+Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine("\n---FIN: CALCULADORA V2---\n");
+Console.ResetColor();
 
 Console.ForegroundColor = ConsoleColor.Green;
-Console.WriteLine("\n--- Fin de CALCULADORA V2 ---\n");
 Console.WriteLine("\n--- Fin del Programa ---");
 Console.ResetColor();
