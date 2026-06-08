@@ -2,7 +2,7 @@
 string? s;
 
 Console.ForegroundColor = ConsoleColor.Green;
-Console.WriteLine("--- INICIO ---\n");
+Console.WriteLine("\n--- INICIO ---\n");
 Console.ResetColor();
 Console.ForegroundColor = ConsoleColor.Yellow;
 Console.WriteLine("Ingrese un número:");
@@ -168,7 +168,9 @@ if (esOperable)
         }
 
         Console.ForegroundColor = ConsoleColor.DarkGreen;
-        Console.WriteLine($"Resultado: {resultado}\n");
+        //Console.WriteLine($"Resultado: {resultado}\n");
+        // modificacion por el punto 4
+        Console.WriteLine($"Resultado: {resultado.ToString()}\n");
         Console.ResetColor();
 
         Console.ForegroundColor = ConsoleColor.Yellow;
@@ -202,10 +204,10 @@ Console.ResetColor();
 
 Console.ForegroundColor = ConsoleColor.Yellow;
 Console.WriteLine("Ingrese un numero: ");
-Console.ResetColor();
 string? leerNumero = Console.ReadLine();
 double numero;
 bool esCasteable = double.TryParse(leerNumero, out numero);
+Console.ResetColor();
 
 if (esCasteable)
 {
@@ -233,16 +235,17 @@ else
 
 Console.ForegroundColor = ConsoleColor.Yellow;
 Console.WriteLine("\nIngresar dos numeros");
-Console.WriteLine("a = ");
 string? leerA = Console.ReadLine();
-Console.WriteLine("b = ");
+int a;
+bool esValidoA = int.TryParse(leerA, out a);
+if(esValidoA){Console.WriteLine($"a = {a}");}
 string? leerB = Console.ReadLine();
+int b;
+bool esValidoB = int.TryParse(leerB, out b);
+if(esValidoB){Console.WriteLine($"b = {b}");}
 Console.ResetColor();
 
-int a, b;
-bool esValidoA = int.TryParse(leerA, out a);
-bool esValidoB = int.TryParse(leerB, out b);
-
+Console.WriteLine("");
 if (esValidoA && esValidoB)
 {
     int maximo = Math.Max(a,b);
