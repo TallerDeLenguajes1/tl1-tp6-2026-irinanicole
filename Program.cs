@@ -110,3 +110,7 @@ else
     Console.WriteLine("\nLa cadena ingresada NO es válida\n");
     Console.ResetColor();
 }
+
+/* Siguiendo con el ejemplo de la calculadora (ejercicio 2) ingrese una ecuación simple como cadena de caracteres  y que el sistema lo resuelva.
+Por ej. ingrese por pantalla “582+2” y que le devuelva la suma de 582  con 2 */
+// Ejercicio resuelto en la rama (CalculadoraV1) en el menu de operaciones (stwitch).
