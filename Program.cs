@@ -48,6 +48,7 @@ if (esOperable)
         Console.WriteLine("(2): RESTA");
         Console.WriteLine("(3): PRODUCTO");
         Console.WriteLine("(4): DIVISION");
+        
         leer = Console.ReadLine();
         int operacion;
         esOperable = int.TryParse(leer, out operacion);
@@ -64,92 +65,181 @@ if (esOperable)
                     Console.WriteLine("Operacion: SUMA");
                     Console.ResetColor();
 
-                    Console.WriteLine("Ingrese el primer termino");
-                    leer = Console.ReadLine();
-                    esEntero1 = int.TryParse(leer, out x);
+                    // Console.WriteLine("Ingrese el primer termino");
+                    // leer = Console.ReadLine();
+                    // esEntero1 = int.TryParse(leer, out x);
                     
-                    Console.WriteLine("Ingrese el segundo termino");
+                    // Console.WriteLine("Ingrese el segundo termino");
+                    // leer = Console.ReadLine();
+                    // esEntero2 = int.TryParse(leer, out y);
+                    // if (esEntero1 && esEntero2)
+                    // {
+                    //     resultado = x + y;
+                    // }
+                    // else
+                    // {
+                    //     Console.ForegroundColor = ConsoleColor.Red;
+                    //     Console.WriteLine("ERROR: Datos ingresados incorrectos");
+                    //     Console.ResetColor();
+                    // }
+
+                    Console.WriteLine("Ingrese la operacion:");
                     leer = Console.ReadLine();
-                    esEntero2 = int.TryParse(leer, out y);
-                    if (esEntero1 && esEntero2)
+                    if (!string.IsNullOrEmpty(leer))
                     {
-                        resultado = x + y;
+                        string[] terminos = leer.Split('+');
+                        esEntero1 = int.TryParse(terminos[0], out x);
+                        esEntero2 = int.TryParse(terminos[1], out y);
+                        if (esEntero1 && esEntero2)
+                        {
+                            resultado = x + y;
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("ERROR: Datos ingresados incorrectos");
+                            Console.ResetColor();
+                        }
                     }
-                    else
-                    {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("ERROR: Datos ingresados incorrectos");
-                        Console.ResetColor();
-                    }
+
                     break;
                 case 2:
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Operacion: RESTA");
                     Console.ResetColor();
                     
-                    Console.WriteLine("Ingrese el primer termino");
-                    leer = Console.ReadLine();
-                    esEntero1 = int.TryParse(leer, out x);
+                    // Console.WriteLine("Ingrese el primer termino");
+                    // leer = Console.ReadLine();
+                    // esEntero1 = int.TryParse(leer, out x);
                     
-                    Console.WriteLine("Ingrese el segundo termino");
+                    // Console.WriteLine("Ingrese el segundo termino");
+                    // leer = Console.ReadLine();
+                    // esEntero2 = int.TryParse(leer, out y);
+                    // if (esEntero1 && esEntero2)
+                    // {
+                    //     resultado = x - y;
+                    // }
+                    // else
+                    // {
+                    //     Console.ForegroundColor = ConsoleColor.Red;
+                    //     Console.WriteLine("ERROR: Datos ingresados incorrectos");
+                    //     Console.ResetColor();
+                    // }
+                    
+                    Console.WriteLine("Ingrese la operacion:");
                     leer = Console.ReadLine();
-                    esEntero2 = int.TryParse(leer, out y);
-                    if (esEntero1 && esEntero2)
+                    if (!string.IsNullOrEmpty(leer))
                     {
-                        resultado = x - y;
+                        string[] terminos = leer.Split('-');
+                        esEntero1 = int.TryParse(terminos[0], out x);
+                        esEntero2 = int.TryParse(terminos[1], out y);
+                        if (esEntero1 && esEntero2)
+                        {
+                            resultado = x - y;
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("ERROR: Datos ingresados incorrectos");
+                            Console.ResetColor();
+                        }
                     }
-                    else
-                    {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("ERROR: Datos ingresados incorrectos");
-                        Console.ResetColor();
-                    }
+
                     break;
                 case 3:
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Operacion: PRODUCTO");
                     Console.ResetColor();
 
-                    Console.WriteLine("Ingrese el primer termino");
-                    leer = Console.ReadLine();
-                    esEntero1 = int.TryParse(leer, out x);
+                    // Console.WriteLine("Ingrese el primer termino");
+                    // leer = Console.ReadLine();
+                    // esEntero1 = int.TryParse(leer, out x);
                     
-                    Console.WriteLine("Ingrese el segundo termino");
+                    // Console.WriteLine("Ingrese el segundo termino");
+                    // leer = Console.ReadLine();
+                    // esEntero2 = int.TryParse(leer, out y);
+                    // if (esEntero1 && esEntero2)
+                    // {
+                    //     resultado = x * y;
+                    // }
+                    // else
+                    // {
+                    //     Console.ForegroundColor = ConsoleColor.Red;
+                    //     Console.WriteLine("ERROR: Datos ingresados incorrectos");
+                    //     Console.ResetColor();
+                    // }
+                    
+                    Console.WriteLine("Ingrese la operacion:");
                     leer = Console.ReadLine();
-                    esEntero2 = int.TryParse(leer, out y);
-                    if (esEntero1 && esEntero2)
+                    if (!string.IsNullOrEmpty(leer))
                     {
-                        resultado = x * y;
+                        string[] terminos = leer.Split('*');
+                        esEntero1 = int.TryParse(terminos[0], out x);
+                        esEntero2 = int.TryParse(terminos[1], out y);
+                        if (esEntero1 && esEntero2)
+                        {
+                            resultado = x * y;
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("ERROR: Datos ingresados incorrectos");
+                            Console.ResetColor();
+                        }
                     }
-                    else
-                    {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("ERROR: Datos ingresados incorrectos");
-                        Console.ResetColor();
-                    }
+
                     break;
                 case 4:
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Operacion: DIVISION");
                     Console.ResetColor();
 
-                    Console.WriteLine("Ingrese el primer termino: ");
-                    leer = Console.ReadLine();
-                    esEntero1 = int.TryParse(leer, out x);
+                    // Console.WriteLine("Ingrese el primer termino: ");
+                    // leer = Console.ReadLine();
+                    // esEntero1 = int.TryParse(leer, out x);
                     
-                    Console.WriteLine("Ingrese el segundo termino DISTINTO DE CERO: ");
+                    // Console.WriteLine("Ingrese el segundo termino DISTINTO DE CERO: ");
+                    // leer = Console.ReadLine();
+                    // esEntero2 = int.TryParse(leer, out y);
+                    // if (esEntero1 && esEntero2 && y != 0 )
+                    // {
+                    //     resultado = x / y;
+                    // }
+                    // else
+                    // {
+                    //     Console.ForegroundColor = ConsoleColor.Red;
+                    //     Console.WriteLine("ERROR: Datos ingresados incorrectos");
+                    //     Console.ResetColor();
+                    // }
+                    
+                    Console.WriteLine("Ingrese la operacion (el segundo termino debe ser != 0):");
                     leer = Console.ReadLine();
-                    esEntero2 = int.TryParse(leer, out y);
-                    if (esEntero1 && esEntero2 && y != 0 )
+                    if (!string.IsNullOrEmpty(leer))
                     {
-                        resultado = x / y;
+                        string[] terminos = leer.Split('/');
+                        esEntero1 = int.TryParse(terminos[0], out x);
+                        esEntero2 = int.TryParse(terminos[1], out y);
+                        if (esEntero1 && esEntero2)
+                        {
+                            while (y == 0 || !esEntero2)
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("-> El segundo termino debe ser un entero NO nulo");
+                                Console.ResetColor();
+                                Console.WriteLine("Ingrese otro numero:");
+                                leer = Console.ReadLine();
+                                esEntero2 = int.TryParse(leer, out y);
+                            }
+                            resultado = x / y;
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("ERROR: Datos ingresados incorrectos");
+                            Console.ResetColor();
+                        }
                     }
-                    else
-                    {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("ERROR: Datos ingresados incorrectos");
-                        Console.ResetColor();
-                    }
+
                     break;
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;
