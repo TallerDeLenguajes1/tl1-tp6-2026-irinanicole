@@ -1,4 +1,8 @@
-﻿// EJERCICIO 4
+﻿// Para utilizar en Ejercicio 5
+using System.Text.RegularExpressions;
+
+
+// EJERCICIO 4
 
 /* Dada una cadena (un string) de texto ingresada por el usuario, realice las siguientes tareas */
 Console.ForegroundColor = ConsoleColor.DarkGreen;
@@ -114,3 +118,91 @@ else
 /* Siguiendo con el ejemplo de la calculadora (ejercicio 2) ingrese una ecuación simple como cadena de caracteres  y que el sistema lo resuelva.
 Por ej. ingrese por pantalla “582+2” y que le devuelva la suma de 582  con 2 */
 // Ejercicio resuelto en la rama (CalculadoraV1) en el menu de operaciones (stwitch).
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+/*  EJERCICIO 5  */
+
+Console.ForegroundColor = ConsoleColor.Yellow;
+Console.WriteLine("\n----------------------------------");
+Console.WriteLine("VALIDACION DE DIRECCION WEB");
+Console.WriteLine("----------------------------------\n");
+Console.ResetColor();
+
+Console.WriteLine("\nIngresar una direccion url o http o https:");
+string? dirWeb = Console.ReadLine();
+
+if (!string.IsNullOrWhiteSpace(dirWeb))
+{
+    //string urlEjemplo1 = "https://google.com";
+    //string urlEjemplo2 = "htp://invalida.com";
+    Console.WriteLine($"Direccion ingresada: {dirWeb}");
+
+    // Expresión regular para validar URLs HTTP o HTTPS
+    string patronDirWeb = @"^(https?:\/\/)?(www\.)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(\/.*)?$";
+    
+    if (Regex.IsMatch(dirWeb, patronDirWeb))
+    {
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+        Console.WriteLine("La direccion web es válida.");
+    }
+    else
+    {
+        Console.ForegroundColor = ConsoleColor.DarkMagenta;
+        Console.WriteLine("La direccion web no es válida.");
+    }
+    Console.ResetColor();
+    
+}
+else
+{
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.WriteLine("\n\aERROR: la cadena ingresada es invalida\n");
+    Console.ResetColor();
+}
+
+Console.ForegroundColor = ConsoleColor.DarkYellow;
+Console.WriteLine("\n------FIN de Validacion de Direccion Web------\n");
+Console.ResetColor();
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+Console.ForegroundColor = ConsoleColor.Yellow;
+Console.WriteLine("\n----------------------------------");
+Console.WriteLine("VALIDACION DE CORREO ELECTRONICO");
+Console.WriteLine("----------------------------------\n");
+Console.ResetColor();
+
+Console.WriteLine("\nIngresar un correo electronico:");
+string? email = Console.ReadLine();
+
+if (!string.IsNullOrWhiteSpace(email))
+{
+    //string emailEjemplo = "usuario@dominio.com";
+    Console.WriteLine($"Correo: {email}");
+
+    // Expresión regular estándar para correos
+    string patronEmail = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+    
+    if (Regex.IsMatch(email, patronEmail))
+    {
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+        Console.WriteLine("El correo electrónico es válido.");
+    }
+    else
+    {
+        Console.ForegroundColor = ConsoleColor.DarkMagenta;
+        Console.WriteLine("El correo electrónico no es válido.");
+    }
+    Console.ResetColor();
+}
+else
+{
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.WriteLine("\n\aERROR: la cadena ingresada es invalida\n");
+    Console.ResetColor();
+}
+
+Console.ForegroundColor = ConsoleColor.DarkYellow;
+Console.WriteLine("\n------FIN de Validacion de Correo Electronico------\n");
+Console.ResetColor();

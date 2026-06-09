@@ -61,3 +61,24 @@ Si no quieres lidiar con escribir barras invertidas constantemente, C# te propor
 	int edad = 30;
 	string mensaje = $"Tengo {edad} años";
 	```
+
+#
+
+# EJERCICIO 5
+
+## Que son y cómo funcionan las expresiones regulares
+
+Las expresiones regulares (Regex) son patrones de búsqueda y manipulación de texto. En C#, se utilizan principalmente para validar formatos (como un correo electrónico), buscar patrones específicos en grandes bloques de código y extraer o reemplazar subcadenas rápidamente.
+En C#, estas operaciones se realizan a través de la clase Regex perteneciente al espacio de nombres System.Text.RegularExpressions.
+
+### ¿Para qué sirven principalmente?
+- Validación de datos: Comprobar si un dato cumple con una estructura concreta (ej. contraseñas seguras, números de teléfono, DNI o códigos postales).
+- Búsqueda avanzada: Encontrar palabras específicas o patrones como fechas en documentos de texto.
+- Limpieza de texto: Reemplazar caracteres no deseados o eliminar espacios adicionales utilizando poco código.
+### ¿Cómo deben ser implementadas?
+La pieza central del procesamiento de texto con expresiones regulares es el motor de expresiones regulares, que se representa mediante el System.Text.RegularExpressions.Regex objeto en .NET. Como mínimo, el procesamiento de texto mediante expresiones regulares requiere que el motor de expresiones regulares se proporcione con los dos elementos de información siguientes:
+
+- Patrón de expresión regular para identificar en el texto.
+	En .NET, los patrones de expresiones regulares se definen mediante una sintaxis o lenguaje especial, que es compatible con expresiones regulares de Perl 5 y agrega otras características, como la coincidencia de derecha a izquierda.
+
+- El texto que se debe analizar para el patrón de expresión regular.
